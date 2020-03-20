@@ -7,8 +7,10 @@
   - [Palenight](https://github.com/drewtempelmeyer/palenight.vim) is the colorscheme I use
   - [NERDTree](https://github.com/preservim/nerdtree) is a file explorer for vim
   - [Vim Fugitive](https://github.com/tpope/vim-fugitive) is a git wrapper for vim
-  - If you don't wish to use some of the above packages, simply remove the corresponding line(s) in the `.vimrc` file, for instance:
-  `Plugin 'tpope/vim-fugitive'`
-- Place them in a child folder of your `.vim` folder, giving a path like `~/.vim/bundle` to reach them. If you store them elsewhere, be sure to change the corresponding line in the `.vimrc`:
-    set rtp+=~/.vim/bundle/Vundle.vim
+  - If you don't wish to use some of the above packages, simply remove the corresponding line(s) in the `.vimrc` file. For instance:
+      `Plugin 'tpope/vim-fugitive'`
+- Place them in a child folder of your `.vim`, yielding a path like `~/.vim/bundle` to reach them. 
+
+If you store them elsewhere, be sure to change the corresponding line in the `.vimrc`:
+      set rtp+=~/.vim/bundle/Vundle.vim
 - Launch `vim` and run `:PluginInstall`
