@@ -13,6 +13,8 @@
       `Plugin 'tpope/vim-fugitive'`
 - Place them in a child folder of your `.vim`, yielding a path like `~/.vim/bundle` to reach them. 
 
-If you store them elsewhere, be sure to change the corresponding line in the `.vimrc`:
-    set rtp+=~/.vim/bundle/Vundle.vim
+If you store them elsewhere, be sure to change the corresponding line in the `.vimrc`.
+
+
+For instance: `set rtp+=~/.vim/bundle/Vundle.vim`
 - Launch `vim` and run `:PluginInstall`
