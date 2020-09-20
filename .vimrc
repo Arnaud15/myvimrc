@@ -52,3 +52,4 @@ set expandtab        " expand tabs to spaces
 set textwidth=120
 " turn line numbers on
 set number
+" set paste
