@@ -22,6 +22,9 @@ set shortmess+=c
 
 set signcolumn=yes
 
+" highlight in search
+nnoremap <CR> :noh<CR><CR>
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
