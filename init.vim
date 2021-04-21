@@ -1,17 +1,12 @@
-" Next up:
-" fzf for search in file
-" linting in python
-" formatting?
-" file explorer
-" git integration
-
 set nocompatible
 
-call plug#begin('~/config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " coc extensions
 " Python
@@ -76,6 +71,15 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 let g:mapleader = "\<Space>"
 
 
+nnoremap <C-F> :execute 'Rg ' . input('Rg/')<CR>
+nnoremap <leader>/ :BLines<CR>
+nnoremap <c-p> :ProjectFiles<cr>
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
 
 " Switching more easily between buffers
 nnoremap gb :ls<CR>:b<Space>
@@ -117,4 +121,4 @@ set hlsearch
 " :source % to source the current file
 
 " python interpreter
-let g:python3_host_prog = '/home/arnaud15/miniconda3/envs/rl/bin/python'
+let g:python3_host_prog = '/home/ubuntu/miniconda3/bin/python'
