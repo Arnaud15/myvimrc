@@ -9,6 +9,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " coc extensions
+
+
+
 " Python
 
 
@@ -16,6 +19,11 @@ call plug#end()
 
 
 " coc setup
+" scroll windows with ctrl k and l
+inoremap <nowait><expr> <C-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-l> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, -1)\<cr>" : "\<Left>"
+
+
 set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
