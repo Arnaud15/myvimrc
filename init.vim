@@ -14,6 +14,10 @@ Plug 'junegunn/fzf.vim'
 
 " Python
 
+" React
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
 
 call plug#end()
 
@@ -141,6 +145,10 @@ set incsearch
 set hlsearch
 
 " :source % to source the current file
+" augroup SyntaxSettings
+"     autocmd!
+"     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+" augroup END
 
 " python interpreter
 let g:python3_host_prog = '/home/ubuntu/miniconda3/bin/python'
