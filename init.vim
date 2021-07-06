@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 
 " coc extensions
 
@@ -144,3 +145,10 @@ set hlsearch
 
 " python interpreter
 let g:python3_host_prog = '/home/ubuntu/miniconda3/bin/python'
+
+
+" typescript support
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
